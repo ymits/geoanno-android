@@ -115,6 +115,9 @@ public class GeoService extends Service implements LocationListener{
 	}
 
 	private void noticeLocation(final Location location){
+		if(location == null){
+			return;
+		}
 		this.executor.execute(new Runnable() {
 			
 			@Override
